@@ -4,7 +4,7 @@
 
 **Complete course notes for Quantitative Reasoning (I), with every example solved by hand and with Python**
 
-*General Education Course · UGE Policy V 1.1 · 3 Credit Hours*
+*General Education Course · First Edition · 3 Credit Hours*
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)
 ![Google Colab](https://img.shields.io/badge/Runs%20on-Google%20Colab-F9AB00?logo=googlecolab&logoColor=white)

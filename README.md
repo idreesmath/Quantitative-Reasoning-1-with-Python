@@ -1,284 +1,175 @@
-# Mathematics 6 — Solution Manuals (Units 9–12)
+<div align="center">
 
-Complete, step-by-step worked solutions to every exercise and review exercise in
-Units 9–12 of **Mathematics 6**, Balochistan Textbook Board, Quetta.
+# 📘 Quantitative Reasoning 1 with Python
 
-Each unit ships as a typeset A4 PDF plus the LaTeX source that produced it, so the
-material can be printed as-is, projected in class, or edited to suit a different
-scheme of work.
+**Complete course notes for Quantitative Reasoning (I), with every example solved by hand and with Python**
 
-The repository also carries three **Google Colab notebooks** that take a scanned unit
-PDF and carry it through to a finished manual — reading the pages, typesetting the
-solutions, and checking the arithmetic.
+*General Education Course · UGE Policy V 1.1 · 3 Credit Hours*
 
-> **Prepared by Muhammad Idrees** — M.Phil (Mathematics), Lecturer, Department of
-> Mathematics, Government Boys Postgraduate College, Sariab Road, Quetta.
+![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)
+![Google Colab](https://img.shields.io/badge/Runs%20on-Google%20Colab-F9AB00?logo=googlecolab&logoColor=white)
+![Pages](https://img.shields.io/badge/Book-181%20pages-0E2547)
+![Examples](https://img.shields.io/badge/Solved%20examples-203-2EC4B6)
+![Programs](https://img.shields.io/badge/Python%20programs-252-FF6B6B)
 
----
+<img src="cover.png" alt="Cover of Quantitative Reasoning 1 with Python" width="420">
 
-## Contents
-
-| Unit | Title | Exercises covered | Pages | PDF | Source |
-|:----:|-------|-------------------|:-----:|:---:|:------:|
-| 9  | Symmetry | 9.1 · 9.2 · 9.3 · Review 9 | 13 | [PDF](pdf/Unit_09_Symmetry_Solutions.pdf) | [.tex](tex/Unit_09_Symmetry_Solutions.tex) |
-| 10 | Geometrical Constructions | 10.1 · 10.2 · Review 10 | 10 | [PDF](pdf/Unit_10_Geometrical_Constructions_Solutions.pdf) | [.tex](tex/Unit_10_Geometrical_Constructions_Solutions.tex) |
-| 11 | Data Management | 11.1 · 11.2 · 11.3 · 11.4 · Review 11 | 16 | [PDF](pdf/Unit_11_Data_Management_Solutions.pdf) | [.tex](tex/Unit_11_Data_Management_Solutions.tex) |
-| 12 | Probability | 12.1 · 12.2 · Review 12 | 9 | [PDF](pdf/Unit_12_Probability_Solutions.pdf) | [.tex](tex/Unit_12_Probability_Solutions.tex) |
-
-**48 pages in total**, covering every numbered question and sub-part in the four units.
+</div>
 
 ---
 
-## The Colab notebooks
+## About the book
 
-**The only file you ever upload is the scanned unit PDF.** Nothing is cloned, no
-`.tex` is uploaded, and nothing needs installing on your own machine — the LaTeX
-template lives inside the notebook.
+**Quantitative Reasoning (I)** is a mandatory General Education course taken by undergraduate students of every field. It builds the ability to work with numbers, understand mathematical and statistical ideas, and interpret data in tables, graphs, charts and equations.
 
-| # | Notebook | What you upload | What you get back | Launch |
-|:-:|----------|-----------------|-------------------|:------:|
-| 1 | **Inspect Textbook Unit** | the unit PDF | every page rendered as an image, any region zoomed at up to 600 dpi, the text pulled out (or OCR'd), page images as a zip | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/REPLACE-ME/math6-solutions/blob/main/notebooks/01_Inspect_Textbook_Unit.ipynb) |
-| 2 | **Build Solution Manual** | the unit PDF | a typeset A4 solution manual in this house style, plus its `.tex` | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/REPLACE-ME/math6-solutions/blob/main/notebooks/02_Build_Solution_Manual.ipynb) |
-| 3 | **Verify Answers** | nothing | every mean, median, mode, pie-chart angle and probability re-computed and asserted against the printed manual | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/REPLACE-ME/math6-solutions/blob/main/notebooks/03_Verify_Answers.ipynb) |
+This book covers the full syllabus with one simple habit:
 
-> **Before publishing:** replace `REPLACE-ME/math6-solutions` in the three badge URLs
-> above with your own `username/repository`, or the badges will point nowhere. That is
-> the only place the repository name appears.
+> ✍️ **Solve it by hand** → 💻 **check it with Python** → 📊 **understand what the numbers mean**
 
-### How the three fit together
+Every example is first worked out **step by step**, with a short *"Why?"* note on the key steps. It is then solved again with a short **Python program** that follows the same steps. Each program in the book is shown with its **real output and charts**.
 
-```
-   your scanned unit PDF
-            │
-            ▼
-   ┌──────────────────────┐
-   │ 1 · Inspect          │   render every page · zoom a faint figure at 300–600 dpi
-   │    the unit          │   · extract or OCR the text · download the page images
-   └──────────┬───────────┘
-              │  you read the exercises off the page images
-              ▼
-   ┌──────────────────────┐
-   │ 2 · Build the        │   house-style LaTeX template · you write the solutions
-   │    solution manual   │   · compile · three quality gates · preview · download
-   └──────────┬───────────┘
-              │  the finished PDF and .tex
-              ▼
-   ┌──────────────────────┐
-   │ 3 · Verify           │   recompute every number independently of what you typed
-   │    the answers       │
-   └──────────────────────┘
-```
+No installation is needed. All programs run free in a web browser on **Google Colab**, and **Unit 0** teaches the Python you need from scratch.
 
-**Notebook 1 is where the care goes.** Angle diagrams and bar-graph labels on these
-scans are often too faint at normal size to tell which side of a transversal a label
-sits on — and `2c°` sitting upper-left rather than upper-right changes the answer. The
-zoom tool in Step 4 takes a page to 300 or 600 dpi and crops any region of it, which
-is how every figure in Units 9–12 was read.
+## What's in this repository
 
-**Notebook 2 carries its own template.** Step 3 sets the unit number, title and your
-name; Step 4 is the one cell you live in, pre-filled with a worked example of each
-pattern — ordinary working, a TikZ figure, a multiple-choice table — so you can see
-every building block in use before deleting them and writing your own. Step 5 compiles
-and reports the three quality gates, and you loop between 4 and 5 until it is right.
+| File | Description |
+|---|---|
+| 📕 [`QR1_with_Python.pdf`](QR1_with_Python.pdf) | The complete book (181 pages) |
+| 📓 [`Unit0_Python_Fundamentals_and_Google_Colab.ipynb`](Unit0_Python_Fundamentals_and_Google_Colab.ipynb) | Unit 0 programs (49) |
+| 📓 [`Unit1_Numerical_Literacy.ipynb`](Unit1_Numerical_Literacy.ipynb) | Unit 1 programs (71) |
+| 📓 [`Unit2_Fundamental_Mathematical_Concepts.ipynb`](Unit2_Fundamental_Mathematical_Concepts.ipynb) | Unit 2 programs (70) |
+| 📓 [`Unit3_Fundamental_Statistical_Concepts.ipynb`](Unit3_Fundamental_Statistical_Concepts.ipynb) | Unit 3 programs (62) |
 
-**A word on the OCR in notebook 1.** It reads body prose reasonably well but mangles
-fractions, exponents, angle symbols and anything inside a figure. Use it to find a
-question quickly, never to copy one — always take the actual numbers off the page
-image.
+## ▶️ Open the notebooks in Google Colab
 
----
+Click a badge to open that unit's notebook directly in Colab:
 
-## How the solutions are written
+| Unit | Open in Colab |
+|---|---|
+| **Unit 0:** Python Fundamentals and Google Colab | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/USERNAME/REPO/blob/main/Unit0_Python_Fundamentals_and_Google_Colab.ipynb) |
+| **Unit 1:** Numerical Literacy | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/USERNAME/REPO/blob/main/Unit1_Numerical_Literacy.ipynb) |
+| **Unit 2:** Fundamental Mathematical Concepts | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/USERNAME/REPO/blob/main/Unit2_Fundamental_Mathematical_Concepts.ipynb) |
+| **Unit 3:** Fundamental Statistical Concepts | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/USERNAME/REPO/blob/main/Unit3_Fundamental_Statistical_Concepts.ipynb) |
 
-Every question follows the same shape, so a pupil always knows where to look:
+**How to use a notebook**
+1. Click a badge above and sign in with your Google (Gmail) account.
+2. Run a cell with the ▶ button or **Shift + Enter**. The output appears below the cell.
+3. Each cell is one example from the book and is complete on its own, so you can run cells in any order.
+4. To keep your own copy with your changes, choose **File → Save a copy in Drive**.
 
-1. **The question restated** in a blue box, keeping the textbook's own numbering —
-   including sub-parts the book skips or repeats.
-2. **`Given:`** the data pulled out of the question and out of the figure.
-3. **The working**, one line per step: formula → substitution → simplification →
-   result with units, with the *reason* for each step named in the right-hand margin
-   (*vertically opposite angles*, *corresponding angles*, *angles on a straight line*,
-   and so on).
-4. **A green answer box** with the final result.
-5. **An orange note** wherever a question is defective, ambiguous, or worth a word of
-   warning.
+You can also download a notebook from this repository and open it in Colab with **File → Upload notebook**.
 
-Other conventions:
+## 📚 Contents
 
-- The **textbook's own method** is used for each exercise, even where a shorter route
-  exists, so the working matches what pupils are taught in class.
-- Fractions are given in **lowest terms**; probabilities as fractions, not decimals.
-- Figures are **redrawn in TikZ** rather than described — angle diagrams, compass
-  constructions with their arcs, bar graphs, pie charts and the 6 × 6 two-dice grid.
-- Checks are shown where they are cheap (`122° + 58° = 180° ✓`, `Σ P = 1 ✓`).
+<details>
+<summary><b>Unit 0: Python Fundamentals and Google Colab</b></summary>
 
----
+0.1 Getting Started: Python and Google Colab ·
+0.2 Variables, Data Types and Arithmetic ·
+0.3 Strings, Printing and Formatting Output ·
+0.4 Lists, Tuples, Dictionaries and Sets ·
+0.5 Making Decisions: Conditions ·
+0.6 Repetition: Loops and Comprehensions ·
+0.7 Functions ·
+0.8 Python Libraries for Mathematics ·
+0.9 Algebra with SymPy ·
+0.10 Matplotlib, NumPy and SciPy
+</details>
 
-## Errata found in the printed textbook
+<details>
+<summary><b>Unit 1: Numerical Literacy</b></summary>
 
-Five printed problems needed a judgement call. Each is solved as faithfully as the
-printed data allows and flagged in an orange note at that point in the PDF.
+1.1 Number System and Basic Arithmetic Operations ·
+1.2 Units, Conversions, Dimensions, Area, Perimeter and Volume ·
+1.3 Rates, Ratios, Proportions and Percentages ·
+1.4 Types and Sources of Data ·
+1.5 Measurement Scales ·
+1.6 Tabular and Graphical Presentation of Data ·
+1.7 Quantitative Reasoning Exercises Using Number Knowledge
+</details>
 
-| Where | Issue | How it is handled |
-|-------|-------|-------------------|
-| Ex 9.2 Q4(ii) | The figure gives `2c = 147°`, so `c = 73.5` — the only non-integer answer in the exercise. | Solved as printed; a note points out that a coefficient of 3 would have given the whole number 49. The label positions were confirmed against a 300 dpi render of page 170: `2c°` upper-left, `7d°` lower-right, `147°` lower-right. |
-| Ex 10.1 Q2(iii) | **130° cannot be constructed with compass and straightedge** — it is not a multiple of 15°. | Solved with a protractor, with the nearest compass-constructible angles (127.5°, 135°) named and the reason explained. |
-| Ex 10.1 Q2(ii) | The activity box prints "120° − 15° = 115°". | Noted as a slip: 120° − 15° = 105°. The method itself is sound. |
-| Ex 10.2 Q3(ii) | `mCD = 80 cm` will not fit on a notebook page; every other length in the exercise is a single digit. | Solved for the printed 80 cm, with a note that 8 cm is almost certainly intended. |
-| Ex 11.2 Q2 | The table's fourth column is headed "Food", but the question says "…and on foot respectively". | Read as **on foot**, with a note. |
+<details>
+<summary><b>Unit 2: Fundamental Mathematical Concepts</b></summary>
 
----
+2.1 Basics of Geometry (Lines, Angles, Circles, Polygons) ·
+2.2 Sets and their Operations ·
+2.3 Relations, Functions and their Graphs ·
+2.4 Exponents, Factoring and Simplifying Algebraic Expressions ·
+2.5 Linear and Quadratic Equations and Inequalities (Algebraic and Graphical) ·
+2.6 Quantitative Reasoning Exercises Using Mathematical Concepts
+</details>
 
-## Repository layout
+<details>
+<summary><b>Unit 3: Fundamental Statistical Concepts</b></summary>
 
-```
-.
-├── README.md
-├── pdf/                                  ← ready-to-print A4 PDFs
-│   ├── Unit_09_Symmetry_Solutions.pdf
-│   ├── Unit_10_Geometrical_Constructions_Solutions.pdf
-│   ├── Unit_11_Data_Management_Solutions.pdf
-│   └── Unit_12_Probability_Solutions.pdf
-├── tex/                                  ← LaTeX source, one self-contained file per unit
-│   ├── Unit_09_Symmetry_Solutions.tex
-│   ├── Unit_10_Geometrical_Constructions_Solutions.tex
-│   ├── Unit_11_Data_Management_Solutions.tex
-│   └── Unit_12_Probability_Solutions.tex
-├── scripts/
-│   ├── generate_unit11_tex.py            ← rebuilds Unit 11's .tex, charts and all
-│   └── verify_answers.py                 ← re-computes every numerical answer
-└── notebooks/
-    ├── 01_Inspect_Textbook_Unit.ipynb
-    ├── 02_Build_Solution_Manual.ipynb
-    └── 03_Verify_Answers.ipynb
-```
+3.1 Population and Sample ·
+3.2 Measures of Central Tendency, Dispersion and Data Interpretation ·
+3.3 Rules of Counting (Multiplicative, Permutation and Combination) ·
+3.4 Basic Probability Theory ·
+3.5 Introduction to Random Variables and their Probability Distributions ·
+3.6 Quantitative Reasoning Exercises Using Statistical Concepts
+</details>
 
-Each `.tex` file is **self-contained** — it carries its own preamble and needs no
-shared class file, so a single unit can be copied out and compiled on its own.
+## ✨ Features
 
-**Unit 11 is generated.** Its bar graphs and pie charts are emitted by
-`scripts/generate_unit11_tex.py`, which computes every bar height and sector angle
-rather than trusting hand-typed coordinates. Edit the script and re-run it to change
-the charts; edit the `.tex` directly only for one-off text fixes you do not mind
-losing on the next regeneration.
+- **Key concepts and formulas** for every topic, in simple words
+- **203 solved examples**, each worked step by step, from everyday Pakistani contexts such as electricity bills charged in slabs, fuel costs, budgets, prices and test results
+- **252 Python programs**, each shown in the book with its real output and Matplotlib charts
+- **Exercises** for every topic, to solve by hand and then check with Python
+- **133 multiple-choice questions** for quick self-tests
+- **A summary** at the end of every topic
+- **A complete answer key** for all exercises and MCQs
+- A **Google Colab guide**, so students need only a browser and a Gmail account
 
----
+## 🧰 Python libraries used
 
-## Building locally
+| Library | Used for |
+|---|---|
+| `math`, `fractions` | arithmetic, HCF/LCM, exact fractions, factorials, combinations |
+| `statistics`, `random`, `itertools` | averages, spread, simulation, counting arrangements |
+| `sympy` | algebra: expanding, factorising, solving equations and inequalities |
+| `numpy`, `matplotlib` | calculations on arrays, graphs and charts |
+| `scipy` | binomial and normal probabilities |
 
-The notebooks remove any need for this, but the manuals build offline just as well.
+All of these come pre-installed on Google Colab.
 
-**Requirements:** a TeX distribution with `pdflatex`, `tcolorbox`, `tikz`, `booktabs`,
-`enumitem`, `multicol`, `mathptmx` and `helvet`. On Debian or Ubuntu:
+**Running on your own computer:** install Python 3.10 or newer, then run
 
 ```bash
-sudo apt-get install texlive-latex-recommended texlive-latex-extra \
-                     texlive-fonts-recommended texlive-pictures poppler-utils
+pip install numpy sympy matplotlib scipy jupyter
+jupyter notebook
 ```
 
-**Build one unit** (run `pdflatex` twice so the page references settle):
+## 🎓 Who is this for?
 
-```bash
-cd tex
-pdflatex -interaction=nonstopmode Unit_09_Symmetry_Solutions.tex
-pdflatex -interaction=nonstopmode Unit_09_Symmetry_Solutions.tex
-```
+- **Undergraduate students** taking Quantitative Reasoning (I), in any field
+- **Teachers** looking for ready examples, exercises and a practical way to bring Python into the course
+- **Anyone** who wants to strengthen numerical, data and probability skills while learning beginner Python
 
-**Build all four:**
+## 👤 Author
 
-```bash
-cd tex
-for f in Unit_*.tex; do
-  pdflatex -interaction=nonstopmode "$f" >/dev/null
-  pdflatex -interaction=nonstopmode "$f" >/dev/null
-done
-```
+**Muhammad Idrees**
+M.Phil (Mathematics)
+Lecturer, Department of Mathematics
+Government Boys Postgraduate College, Sariab Road, Quetta
+📧 [idrees@idrees.pk](mailto:idrees@idrees.pk)
 
-**Regenerate Unit 11's source from the chart script:**
+## 📝 Feedback
 
-```bash
-cd scripts && python3 generate_unit11_tex.py   # writes Unit_11_Data_Management_Solutions.tex
-```
+Found a mistake, or have a suggestion? Please [open an issue](../../issues) or send an email. Feedback from students and teachers is very welcome.
 
-**Re-check every number:**
+## © Copyright and use
 
-```bash
-python3 scripts/verify_answers.py
-```
+© 2026 Muhammad Idrees. All rights reserved.
 
-### Quality gates
-
-The same three checks notebook 2 reports after every compile. Worth re-running after
-any edit:
-
-```bash
-# 1. No LaTeX errors and no overfull lines
-pdflatex -interaction=nonstopmode FILE.tex | grep -iE "^!|overfull"
-
-# 2. No Type 3 bitmap fonts (they print badly and look blurry on screen)
-pdffonts FILE.pdf | grep -i type3        # must print nothing
-
-# 3. Eyeball the pages
-pdftoppm -r 60 -png FILE.pdf page
-```
-
-All four units currently build with **zero errors, zero overfull boxes and zero Type 3
-fonts**.
+You are welcome to read, download and use this book and its notebooks for personal study and classroom teaching. Please credit the author when sharing. Do not sell or republish the book, in whole or in part, without permission.
 
 ---
 
-## Adapting the manuals
+<div align="center">
 
-**Change the credit line.** Each `.tex` has the name in exactly two places — the
-`\fancyfoot[L]` line in the preamble and the credit `tcolorbox` just under the title.
-To drop the credit entirely, delete that `tcolorbox` and the `\fancyfoot[L]` line. In
-notebook 2 this is the `SHOW_CREDIT` switch in Step 3.
+**Solve by hand · Check with Python · Understand with data**
 
-**Change the colours.** All six are defined together near the top of each file:
+⭐ If this book helps you, please star the repository and share it with your classmates and colleagues.
 
-```latex
-\definecolor{mainorange}{HTML}{E8731A}   % section banners, notes
-\definecolor{deepblue}{HTML}{1F4E79}     % title, headers, question boxes
-\definecolor{softblue}{HTML}{E8F1FA}     % question-box fill
-\definecolor{softgreen}{HTML}{E6F4EA}    % answer-box fill
-\definecolor{ansgreen}{HTML}{1E7B34}     % answer text
-\definecolor{softyellow}{HTML}{FFF6DD}   % note-box fill
-```
-
-**Print in black and white.** Set all six to greys — the layout depends on the boxes,
-not on hue.
-
-**Start a new unit.** Use notebook 2: it is the same template with the content
-stripped out.
-
----
-
-## Source material and licence
-
-This repository contains **only original worked solutions**. The textbook itself —
-its text, its figures and its scanned pages — is **not** redistributed here, and
-`.gitignore` is set up to keep scans out of the history. Readers need their own copy
-of *Mathematics 6* (Balochistan Textbook Board) to use these manuals, since the
-questions are referenced by the book's own numbering.
-
-The solutions, the LaTeX source and the notebooks are the author's own work. A
-permissive-but-attributed licence such as **CC BY-NC-SA 4.0** suits teaching material
-of this kind: it lets other teachers copy and adapt the manuals for their classes while
-keeping the attribution and keeping the result free. Add your chosen licence as a
-`LICENSE` file in the repository root — GitHub will then display it in the sidebar.
-
----
-
-## Contributing
-
-Corrections are welcome, especially from teachers using these in class.
-
-- **A wrong answer or a slipped step** — open an issue naming the unit, exercise and
-  question number (for example, "Unit 11, Ex 11.4 Q1(iii), median"), and say what the
-  answer should be.
-- **A figure misread from the scan** — the angle figures in Unit 9 and the bar graph in
-  Ex 11.1 Q5 were read off printed pages. If a value looks wrong against a clean copy,
-  say which page and what it should read; notebook 1 Step 4 will settle it.
-- **A fix** — edit the `.tex`, rebuild, confirm the three quality gates still pass, and
-  open a pull request. For Unit 11, edit `scripts/generate_unit11_tex.py` rather than
-  the generated `.tex`.
+</div>
